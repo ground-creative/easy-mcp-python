@@ -134,7 +134,30 @@ celerybeat.pid
 *.swo
 *~
 
-app/*
-!app/.gitkeep
+# Storage
 storage/*
 !storage/.gitkeep
+
+# App
+app/*
+!app/config
+app/config/*
+!app/config/.gitkeep
+!app/middleware
+app/middleware/*
+!app/middleware/.gitkeep
+!app/services
+app/services/*
+!app/services/.gitkeep
+!app/static
+app/static/*
+!app/static/.gitkeep
+!app/templates
+app/templates/*
+!app/templates/.gitkeep
+!app/tools
+app/tools/*
+!app/tools/.gitkeep
+!app/utils
+app/utils/*
+!app/utils/.gitkeep

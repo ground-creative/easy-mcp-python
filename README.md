@@ -1,6 +1,7 @@
 # Easy MCP Python
 
-A simple python mvc to work with mcp servers.
+A simple python mvc framework to work with mcp servers.<br>
+The framework uses a fastapi application to create services.
 
 ## Installation
 
@@ -23,4 +24,33 @@ source venv/bin/activate
 
 ```
 pip install -r requirements.txt
+```
+
+## Run the server
+
+To run the server you can use one of the following commands:
+
+```
+# Run via fastapi wrapper
+python3 run.py -s fastapi
+
+# Run the mcp server directly
+python3 run.py -s fastmcp
+```
+
+## Adding Tools
+
+Create tools in folder app/tools. Use `{function_name}_tool` name convention like this example:
+
+```
+# app/tools/add.py
+
+from utils.application.logger import logger # Use to add logging capabilities
+from mcp.server.fastmcp import Context      # Use `ctx: Context` as function param to get mcp context
+from core.utils.state import global_state   # Use to add and read global vars
+from core.utils.logger import logger        # Use to import the logger instance
+
+def add_numbers_tool(a: int, b: int) -> int:
+    """Add two numbers"""
+    return a + b
 ```
