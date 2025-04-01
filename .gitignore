@@ -161,3 +161,5 @@ app/tools/*
 !app/utils
 app/utils/*
 !app/utils/.gitkeep
+core/*
+!core/.gitkeep
