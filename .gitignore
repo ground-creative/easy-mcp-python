@@ -139,7 +139,7 @@ storage/*
 !storage/.gitkeep
 
 # App
-app/*
+app/
 
 # Core
 core/
