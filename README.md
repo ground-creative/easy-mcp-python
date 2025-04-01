@@ -13,7 +13,7 @@ git clone https://github.com/ground-creative/easy-mcp-python.git
 
 2. Change environment variables in env.sample file and rename it to .env
 
-3. Create venv environment inside the cloned folder:
+3. Create venv environment
 
 ```
 python3 -m venv venv
@@ -100,6 +100,20 @@ MIDDLEWARE = {"mcp": [{"middleware": "app.middleware.MyMiddleware", "priority": 
 Otionally, you can pass arguments to the middleware:
 
 ```
+class MyMiddleware(BaseHTTPMiddleware):
+    def __init__(
+        self, app, some_arg, *args, **kwargs
+    ):
+        self._some_arg = some_arg
+        super().__init__(app)
+
+    async def dispatch(self, request: Request, call_next):
+
+        """ Your code here """
+
+        response = await call_next(request)
+        return response
+
 {
     "middleware": "app.middleware.MyMiddleware",
     "priority": 1,
@@ -220,8 +234,3 @@ var = config.get("VARIABLE_NAME")
 
 all = config.get_all()
 ```
-
-## Test Application
-
-You can find a test application at this reposiroty:<br>
-https://github.com/ground-creative/asy-mcp-python-test-app
