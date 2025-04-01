@@ -13,7 +13,7 @@ git clone https://github.com/ground-creative/easy-mcp-python.git
 
 2. Change environment variables in env.sample file and rename it to .env
 
-3. Create venv environment
+3. Create venv environment inside the cloned folder:
 
 ```
 python3 -m venv venv
