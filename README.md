@@ -194,10 +194,10 @@ SERVICES = [
     "core.services.server_info",    # server info html page
 ]
 
-# Optionally, add a logo and favicon url
+# Optionally, add a logo and favicon urls to the env file
 
-SERVICES_LOGO_URL = "http://yourdomain.com/your_logo.jpg"
-SERVICES_FAVICON_URL = "http://yourdomain.com/your_favicon.png"
+SERVICES_LOGO_URL=http://yourdomain.com/your_logo.jpg
+SERVICES_FAVICON_URL=http://yourdomain.com/your_favicon.png
 ```
 
 ## Using Global Variables
