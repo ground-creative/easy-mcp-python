@@ -157,7 +157,7 @@ PRESTART_HOOKS = {
 1. Create your services in app/services folder:
 
 ```
-# app/serices/my_services.py
+# app/services/my_services.py
 
 from fastapi import APIRouter
 from fastapi.responses import HTMLResponse
