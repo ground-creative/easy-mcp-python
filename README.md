@@ -183,7 +183,7 @@ SERVICES = [
 # Optionally, add a logo and favicon url
 
 SERVICES_LOGO_URL = "http://yourdomain.com/your_logo.jpg"
-SERVICES_LOGO_URL = "http://yourdomain.com/your_favicon.png"
+SERVICES_FAVICON_URL = "http://yourdomain.com/your_favicon.png"
 ```
 
 ## Using Global Variables

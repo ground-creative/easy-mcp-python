@@ -163,5 +163,4 @@ app/utils/*
 !app/utils/.gitkeep
 
 # Core
-core/*
-!core/.gitkeep
+core/
