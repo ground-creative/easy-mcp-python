@@ -167,7 +167,7 @@ SERVICES = [
 
 ### Using the server info html page:
 
-2. Create app/config/app.py file if it does not exist and add this service:
+If you want to use the server info page, create app/config/app.py file if it does not exist and add this service:
 
 ```
 SERVICES = [
