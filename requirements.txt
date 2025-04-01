@@ -1,1 +1,0 @@
-git+https://github.com/ground-creative/easy-mcp-core-python.git@1.1.0#egg=easy-mcp-core

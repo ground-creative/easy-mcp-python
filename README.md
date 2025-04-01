@@ -20,10 +20,16 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-4. Install requirements
+4. Clone the core repository:
 
 ```
-pip install -r requirements.txt
+git clone https://github.com/ground-creative/easy-mcp-core-python.git core
+```
+
+5. Install requirements:
+
+```
+pip install -r core/requirements.txt
 ```
 
 ## Run the server
@@ -173,6 +179,11 @@ If you want to use the server info page, create app/config/app.py file if it doe
 SERVICES = [
     "core.services.server_info",    # server info html page
 ]
+
+# Optionally, add a logo and favicon url
+
+SERVICES_LOGO_URL = "http://yourdomain.com/your_logo.jpg"
+SERVICES_LOGO_URL = "http://yourdomain.com/your_favicon.png"
 ```
 
 ## Using Global Variables
