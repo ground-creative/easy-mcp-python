@@ -175,7 +175,7 @@ SERVICES = [
 ]
 ```
 
-## Using global variables
+## Using Global Variables
 
 To use global variables, simply import the GlobalState class:
 
@@ -188,7 +188,7 @@ def some_tool():
     global_state.set("some_var", "somevalue", True) # The last parameter edits value if key already exists when set to true
 ```
 
-## Using environment variables
+## Using Environment Variables
 
 To get environment variables added in the .env, use `EnvConfig` utility:
 
@@ -198,7 +198,7 @@ from core.utils.env import EnvConfig
 var = EnvConfig.get("VARIABLE_NAME")
 ```
 
-## Using Config variables
+## Using Config Variables
 
 To get config variables added in app/config/app.py you can use the config object:
 
