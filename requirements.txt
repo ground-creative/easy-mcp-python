@@ -1,5 +1,1 @@
-fastapi==0.115.11
-mcp==1.5.0
-python-dotenv==1.0.1
-ninja2==0.1
-uvicorn==0.34.0
+git+https://github.com/ground-creative/easy-mcp-core-python.git@1.1.0#egg=easy-mcp-core
