@@ -89,9 +89,11 @@ class MyMiddleware(BaseHTTPMiddleware):
 # app/config/app.py
 
 MIDDLEWARE = {"mcp": [{"middleware": "app.middleware.MyMiddleware", "priority": 1}]}
+```
 
-# optionally, you can pass arguments to the middleware
+Otionally, you can pass arguments to the middleware
 
+```
 {
     "middleware": "app.middleware.MyMiddleware",
     "priority": 1,
