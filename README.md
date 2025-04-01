@@ -91,7 +91,7 @@ class MyMiddleware(BaseHTTPMiddleware):
 MIDDLEWARE = {"mcp": [{"middleware": "app.middleware.MyMiddleware", "priority": 1}]}
 ```
 
-Otionally, you can pass arguments to the middleware
+Otionally, you can pass arguments to the middleware:
 
 ```
 {
@@ -101,4 +101,111 @@ Otionally, you can pass arguments to the middleware
         "some_arg": "some value"
     }
 }
+```
+
+## StartUp Hook Usage
+
+1. Create a hook in app/utils folder:
+
+```
+# app/utils/my_prestart_hook
+
+import sqlite3
+from core.utils.logger import logger        # Use to add logging capabilities
+from core.utils.state import global_state   # Use to add and read global vars
+from core.utils.env import EnvConfig        # Use to get env variables
+
+def init_db(server_name):
+    db_path = EnvConfig.get("DB_PATH")
+    db_handler = DatabaseHandler(db_path)
+    global_state.set("db_handler", db_handler)          # make db_handler available globally
+    logger.info("Database initialized successfully.")
+```
+
+2. Create app/config/app.py file if it does not exist and add your hooks:
+
+```
+# app/config/app.py
+
+PRESTART_HOOKS = {
+    "fastapi": ["app.utils.my_prestart_hook.init_db"],
+}
+```
+
+## Adding Services
+
+1. Create your services in app/services folder:
+
+```
+# app/serices/my_services.py
+
+from fastapi import APIRouter
+from fastapi.responses import HTMLResponse
+from core.utils.env import EnvConfig            # Use to get env variables
+from core.utils.logger import logger            # Use to add logging capabilities
+from core.utils.state import global_state       # use to add and read global vars
+
+router = APIRouter()
+
+
+@router.get("/my-route")
+async def my_route():
+    html_content = (
+        f"<h1>{EnvConfig.get("SERVER_NAME")}</h1>" f"<p>Test service working</p>"
+    )
+    return HTMLResponse(html_content)
+
+```
+
+2. Create app/config/app.py file if it does not exist and add your services:
+
+```
+SERVICES = [
+    "app.services.my_services",
+]
+```
+
+### Using the server info html page:
+
+2. Create app/config/app.py file if it does not exist and add this service:
+
+```
+SERVICES = [
+    "core.services.server_info",    # server info html page
+]
+```
+
+## Using global variables
+
+To use global variables, simply import the GlobalState class:
+
+```
+from core.utils.state import global_state
+
+def some_tool():
+    all = global_state.get_all()
+    var = global_state.get("some-var")
+    global_state.set("some_var", "somevalue", True) # The last parameter edits value if key already exists when set to true
+```
+
+## Using environment variables
+
+To get environment variables added in the .env, use `EnvConfig` utility:
+
+```
+from core.utils.env import EnvConfig
+
+var = EnvConfig.get("VARIABLE_NAME")
+```
+
+## Using Config variables
+
+To get config variables added in app/config/app.py you can use the config object:
+
+```
+from core.utils.config import config
+
+var = config.get("VARIABLE_NAME")
+
+all = config.get_all()
 ```
