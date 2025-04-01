@@ -234,3 +234,27 @@ var = config.get("VARIABLE_NAME")
 
 all = config.get_all()
 ```
+
+## Folder Structure
+
+The following folder structure is expected from the core:
+
+```
+app/
+    config/         # config folder
+    middleware/     # mcp middleware
+    services/       # fastapi services
+    tools/          # tools folder
+    templates/      # templates folder
+    statis/         # static folder
+    utils/          # utils folder
+```
+
+## Storage
+
+Use the storage folder to store static data such as databases or images.
+
+## Test Application
+
+You can find an example application here:<br>
+https://github.com/ground-creative/easy-mcp-python-test-app
