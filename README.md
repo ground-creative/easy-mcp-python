@@ -54,3 +54,49 @@ def add_numbers_tool(a: int, b: int) -> int:
     """Add two numbers"""
     return a + b
 ```
+
+## Adding Middleware To MCP Server Requests
+
+1. Create middleware class in `app/middleware` folder as shown in the example:
+
+```
+# app/middleware/MyMiddleware.py
+
+from starlette.middleware.base import BaseHTTPMiddleware
+from fastapi import Request
+from mcp.server.fastmcp import Context      # Use `ctx: Context` as function param to get mcp context
+from core.utils.logger import logger        # Use to add logging capabilities
+from core.utils.state import global_state   # Use to add and read global vars
+
+class MyMiddleware(BaseHTTPMiddleware):
+    def __init__(
+        self, app, *args, **kwargs
+    ):
+        super().__init__(app)
+
+    async def dispatch(self, request: Request, call_next):
+
+        """ Your code here """
+
+        response = await call_next(request)
+        return response
+
+```
+
+2. Create app/config/app.py file if it does not exist and add your middlewares:
+
+```
+# app/config/app.py
+
+MIDDLEWARE = {"mcp": [{"middleware": "app.middleware.MyMiddleware", "priority": 1}]}
+
+# optionally, you can pass arguments to the middleware
+
+{
+    "middleware": "app.middleware.MyMiddleware",
+    "priority": 1,
+    "args": {
+        "some_arg": "some value"
+    }
+}
+```
