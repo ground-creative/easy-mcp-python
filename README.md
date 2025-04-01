@@ -100,6 +100,20 @@ MIDDLEWARE = {"mcp": [{"middleware": "app.middleware.MyMiddleware", "priority": 
 Otionally, you can pass arguments to the middleware:
 
 ```
+class MyMiddleware(BaseHTTPMiddleware):
+    def __init__(
+        self, app, some_arg, *args, **kwargs
+    ):
+        self._some_arg = some_arg
+        super().__init__(app)
+
+    async def dispatch(self, request: Request, call_next):
+
+        """ Your code here """
+
+        response = await call_next(request)
+        return response
+
 {
     "middleware": "app.middleware.MyMiddleware",
     "priority": 1,
