@@ -194,6 +194,16 @@ SERVICES = [
     "core.services.server_info",    # server info html page
 ]
 
+# Optional, add configuration for the info server
+INFO_SERVICE_CONFIG = {
+    "service_uri": "/",
+    "login_url": "'Full path to authentication URL'",
+    "site_url": "Full path application main site URL",
+    "site_name": "Application main site name"
+    "show_tools_specs": True,   # show specs for tools (name, description, parameters)
+    "header_params": {}, # a set of header parameters to document in the info page. ex: {"X-ACCESS_TOKEN": "Some description"}
+}
+
 # Optionally, add a logo and favicon urls to the env file
 
 SERVICES_LOGO_URL=http://yourdomain.com/your_logo.jpg
