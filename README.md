@@ -246,7 +246,7 @@ app/
     services/       # fastapi services
     tools/          # tools folder
     templates/      # templates folder
-    statis/         # static folder
+    static/         # static folder
     utils/          # utils folder
 ```
 
