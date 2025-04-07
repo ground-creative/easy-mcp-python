@@ -196,7 +196,7 @@ SERVICES = [
 
 # Optional, add configuration for the info server
 INFO_SERVICE_CONFIG = {
-    "service_uri": "/",
+    "service_uri": "/", # the uri for the info service page
     "login_url": "'Full path to authentication URL'",
     "site_url": "Full path application main site URL",
     "site_name": "Application main site name"
