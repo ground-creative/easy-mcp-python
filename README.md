@@ -210,7 +210,7 @@ SERVICES_LOGO_URL=http://yourdomain.com/your_logo.jpg
 SERVICES_FAVICON_URL=http://yourdomain.com/your_favicon.png
 ```
 
-### Server Info Page Specs Decorators
+### Server info page specs decorators
 
 It's possible to use decorators to add tags to tools specs and to exclude tools from the specs:
 
