@@ -10,6 +10,12 @@ Here are few applications using the mvc container:<br>
 [GitHub Tools](https://github.com/ground-creative/easy-mcp-github-tools-python)<br>
 [Google Drive Tools](https://github.com/ground-creative/easy-mcp-gdrive-tools-python)<br>
 
+# Middlewares
+
+Here are few middleware classes that can be loaded:<br>
+
+[Google oAuth](https://github.com/ground-creative/easy-mcp-google-auth-middleware)
+
 ## Installation
 
 1. Clone the repository
