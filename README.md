@@ -5,11 +5,9 @@ The framework uses a fastapi application to create services.
 
 # Applications
 
-Here are few applications using the mvc container
-Github
-https://github.com/ground-creative/easy-mcp-github-tools-python<br>
-Web Tools
-https://github.com/ground-creative/easy-mcp-web-tools-python
+Here are few applications using the mvc container;<br>
+[GitHub Tools](https://github.com/ground-creative/easy-mcp-github-tools-python)<br>
+[Web Tools](https://github.com/ground-creative/easy-mcp-web-tools-python)<br>
 
 ## Installation
 
