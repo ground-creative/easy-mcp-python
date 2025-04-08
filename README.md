@@ -12,7 +12,7 @@ Here are few applications using the mvc container:<br>
 
 # Middlewares
 
-Here are few middleware classes that can be loaded:<br>
+Here are few middleware classes that can be loaded in the mvc container:<br>
 
 [Google oAuth](https://github.com/ground-creative/easy-mcp-google-auth-middleware)
 
