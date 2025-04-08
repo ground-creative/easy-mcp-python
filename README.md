@@ -280,7 +280,7 @@ app/
 
 Use the storage folder to store static data such as databases or images.
 
-## Test Application
+## Sample Application
 
-You can find an example application here:<br>
+You can find a sample application here:<br>
 https://github.com/ground-creative/easy-mcp-python-test-app
