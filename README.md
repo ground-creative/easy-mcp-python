@@ -210,6 +210,22 @@ SERVICES_LOGO_URL=http://yourdomain.com/your_logo.jpg
 SERVICES_FAVICON_URL=http://yourdomain.com/your_favicon.png
 ```
 
+### Server Info Page Specs Decorators
+
+It's possible to use decorators to add tags to tools specs and to exclude tools from the specs:
+
+```
+from core.utils.tools import doc_tag
+
+@doc_tag("Files")   # add tag for info page specs
+def create_file_tool()
+
+from core.utils.tools import doc_exclude
+
+doc_exclude   # exclude tool from specs info page
+def edit_file_tool()
+```
+
 ## Using Global Variables
 
 To use global variables, simply import the GlobalState class:
