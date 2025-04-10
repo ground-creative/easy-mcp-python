@@ -212,9 +212,10 @@ INFO_SERVICE_CONFIG = {
     "service_uri": "/", # the uri for the info service page
     "login_url": "'Full path to authentication URL'",
     "site_url": "Full path application main site URL",
-    "site_name": "Application main site name"
+    "site_name": "Application main site name",
     "show_tools_specs": True,   # show specs for tools (name, description, parameters)
     "header_params": {}, # a set of header parameters to document in the info page. ex: {"X-ACCESS_TOKEN": "Some description"}
+    "notes": [] # a list of notes for the server information 
 }
 
 # Optionally, add a logo and favicon urls to the env file
