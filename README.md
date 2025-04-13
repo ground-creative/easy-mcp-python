@@ -215,7 +215,7 @@ INFO_SERVICE_CONFIG = {
     "site_name": "Application main site name",
     "show_tools_specs": True,   # show specs for tools (name, description, parameters)
     "header_params": {}, # a set of header parameters to document in the info page. ex: {"X-ACCESS_TOKEN": "Some description"}
-    "notes": [] # a list of notes for the server information 
+    "notes": [] # a list of notes for the server information
 }
 
 # Optionally, add a logo and favicon urls to the env file
@@ -229,10 +229,13 @@ SERVICES_FAVICON_URL=http://yourdomain.com/your_favicon.png
 It's possible to use decorators to add tags to tools specs and to exclude tools from the specs:
 
 ```
-from core.utils.tools import doc_tag
+from core.utils.tools import doc_tag, doc_name
 
-@doc_tag("Files")   # add tag for info page specs
+@doc_tag("Files")               # add tag for info page specs
+@doc_name("Create File")        # add custom tool name for info page specs
 def create_file_tool()
+
+
 
 from core.utils.tools import doc_exclude
 
