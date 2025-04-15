@@ -213,7 +213,9 @@ INFO_SERVICE_CONFIG = {
     "site_name": "Application main site name",
     "show_tools_specs": True,   # show specs for tools (name, description, parameters)
     "header_params": {}, # a set of header parameters to document in the info page. ex: {"X-ACCESS_TOKEN": "Some description"}
-    "notes": [] # a list of notes for the server information
+    "notes": [], # a list of notes for the server information
+    "privacy_policy_url": "'Privacy Policy URL'"
+    "terms_of_service_url": "'Terms of Service URL'"
 }
 
 # Optionally, add a logo and favicon urls to the env file
