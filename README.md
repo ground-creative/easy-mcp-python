@@ -1,6 +1,6 @@
 # Easy MCP Python
 
-A simple python mvc framework to work with mcp servers.<br>
+A simple python framework to work with mcp servers.<br>
 The framework uses a fastapi application to create services.
 
 ## Applications
@@ -12,8 +12,6 @@ Here are few applications using the mvc container:<br>
 [Gmail Tools](https://github.com/ground-creative/easy-mcp-gmail-tools-python)<br>
 
 ## Middlewares
-
-Here are few middleware classes that can be loaded in the mvc container:<br>
 
 [Google oAuth](https://github.com/ground-creative/easy-mcp-google-auth-middleware)
 
